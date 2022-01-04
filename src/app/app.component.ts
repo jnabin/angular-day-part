@@ -5,8 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  options:any = {};
+export class AppComponent{
   days = [
     {name: 'monday', position: 1}, 
     {name: 'tuesday', position: 2}, 
@@ -17,20 +16,7 @@ export class AppComponent implements OnInit{
     {name: 'sunday', position: 7}
   ];
   hours = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
-  klass = 'selected';
-  startCell = null;
-  isDragging = false;
   selected:string[] = [];
-
-  isStartSelected = false;
-
-  constructor(){
-
-  }
-
-  ngOnInit(): void {
-      this.options.reset = (this.options.reset === undefined) ? true : this.options.reset;
-  }
   
   selectHour(hour:any) {
     let isExist = false;

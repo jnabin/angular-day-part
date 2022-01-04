@@ -4,14 +4,12 @@
       <tr>
           <th></th>
           <th *ngFor="let hour of hours">
-              <a *ngIf="!options.disableColumnSelection" (click)="selectHour(hour)" [hidden] ="hour === 24">{{hour}}</a>
-              <span *ngIf="options.disableColumnSelection">{{hour}}</span>
+              <a (click)="selectHour(hour)" [hidden] ="hour === 24">{{hour}}</a>
           </th>
       </tr>
       <tr *ngFor="let day of days">
           <th>
-              <a *ngIf="!options.disableRowSelection" (click)="selectDay(day.position)">{{day.name}}</a>
-              <span *ngIf="options.disableRowSelection">{{day.name}}</span>
+              <a (click)="selectDay(day.position)">{{day.name}}</a>
           </th>
           <td (click)="selectIndividual(day.position, hour)" *ngFor="let hour of hours" [class.selected]="checkIfSelected(day.position, hour)"></td>
       </tr>

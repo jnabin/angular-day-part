@@ -58,7 +58,6 @@ export class AppComponent implements OnInit{
         this.selected.push(6 +''+ hour);
         this.selected.push(7 +''+ hour);
        }
-    console.log(this.selected);
   }
 
   selectDay(day:any) {
@@ -135,8 +134,6 @@ export class AppComponent implements OnInit{
         this.selected.push(day+''+22);
         this.selected.push(day+''+23);
       }
-
-    console.log(this.selected);
   }
 
   checkIfSelected(day:any, hour:any):boolean{
